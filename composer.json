@@ -2,7 +2,7 @@
     "name": "dbal-util/cli-bundle",
     "type": "symfony-bundle",
     "description": "Symfony Dbal Cli Bundle",
-    "keywords": ["DBAL", "Database", "Persistence"],
+    "keywords": ["dbal", "database", "persistence", "cli"],
     "homepage": "https://github.com/dbal-util/cli-bundle",
     "license": "MIT",
     "authors": [
