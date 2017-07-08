@@ -6,14 +6,8 @@
     "homepage": "https://github.com/dbal-util/cli-bundle",
     "license": "MIT",
     "authors": [
-        {
-            "name": "Jean-bernard Addor",
-            "email": "jean-bernard.addor@umontreal.ca"
-        },
-        {
-            "name": "Community",
-            "homepage": "https://github.com/dbal-util/cli-bundle"
-        }
+        {"name": "Jean-bernard Addor"},
+        {"name": "Community", "homepage": "https://github.com/dbal-util/cli-bundle"}
     ],
     "require": {
         "php": "^5.0",
