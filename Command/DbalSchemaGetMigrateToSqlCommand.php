@@ -32,13 +32,12 @@ class DbalSchemaGetMigrateToSqlCommand extends ContainerAwareCommand
         // $conn = $this->getDBAL();
         $conn = $this->getContainer()->get('doctrine.dbal.default_connection');
         $schema = $this->getContainer()->get('kernel')->getDbalSchema();
-        foreach ($conn
+        foreach (($conn
                 ->getSchemaManager()
                 ->createSchema()
                 ->getMigrateToSql($schema, $conn->getDatabasePlatform())
-                as $line):
+                ) as $line) :
             $output->writeln($line);
         endforeach;
     }
-
 }
