@@ -28,7 +28,8 @@ class DbalListDatabasesCommand extends ContainerAwareCommand
             // ...
         // }
 
-        $output->writeln($this
+        $output->writeln(
+            $this
             // ->getDBAL()
             ->getContainer()->get('doctrine.dbal.default_connection')
             ->getSchemaManager()
