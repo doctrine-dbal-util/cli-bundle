@@ -34,7 +34,7 @@ class DbalDropAllTablesWithoutAreYouSureCommand extends ContainerAwareCommand
                 ->listTables()
                 ) as $table) :
             $output->writeln($table->getName());
-            $conn->exec('DROP TABLE "' . $table->getName() . '" CASCADE');
+            $conn->exec('DROP TABLE "'.$table->getName().'" CASCADE');
             // "" for reserved keyword like in: DROP TABLE "user", TODO: not sure if good idea
         endforeach;
     }
