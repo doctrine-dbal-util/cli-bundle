@@ -42,20 +42,19 @@ class DbalSchemaUpdateCommand extends ContainerAwareCommand
 -- REVOKE UPDATE ON url FROM ""$current_user""; -- also revokes right to modify foreign keys on other tables...
 EOT;
 
-        foreach ($schema->toSql($conn->getDatabasePlatform()) as $line):
+        foreach ($schema->toSql($conn->getDatabasePlatform()) as $line) :
             $output->writeln($line);
             $conn->exec($line);
         endforeach;
         // $output->writeln($additional_sql);
         // $conn->exec($additional_sql);
         $output->writeln('Test if schema is in DB: almost nothing should appear below this line.');
-        foreach ($conn
+        foreach (($conn
                 ->getSchemaManager()
                 ->createSchema()
                 ->getMigrateToSql($schema, $conn->getDatabasePlatform())
-                as $line):
+                ) as $line) :
             $output->writeln($line);
         endforeach;
     }
-
 }
