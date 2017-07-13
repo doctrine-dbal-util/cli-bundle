@@ -29,13 +29,13 @@ class DbalDropAllTablesWithoutAreYouSureCommand extends ContainerAwareCommand
         // }
 
         $conn = $this->getContainer()->get('doctrine.dbal.default_connection');
-        foreach ($conn
+        foreach (($conn
                 ->getSchemaManager()
                 ->listTables()
-                as $table):
+                ) as $table) :
             $output->writeln($table->getName());
-            $conn->exec('DROP TABLE "' . $table->getName() . '" CASCADE'); // "" for reserved keyword like in: DROP TABLE "user"
+            $conn->exec('DROP TABLE "' . $table->getName() . '" CASCADE');
+            // "" for reserved keyword like in: DROP TABLE "user", TODO: not sure if good idea
         endforeach;
     }
-
 }
