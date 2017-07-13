@@ -32,14 +32,14 @@ class DbalSchemaUpdateCommand extends ContainerAwareCommand
         // $conn = $this->getDBAL();
         $conn = $this->getContainer()->get('doctrine.dbal.default_connection');
         $schema = $this->getContainer()->get('kernel')->getDbalSchema();
-        $current_user = get_current_user();
-        $additional_sql_disabled = <<<"EOT"
+        $currentUser = get_current_user();
+        $additionalSql__disabled = <<<"EOT"
 -- ALTER TABLE ""user"" ALTER uuid SET DEFAULT gen_random_uuid();
 -- ALTER TABLE owned_url ALTER uuid SET DEFAULT gen_random_uuid();
 -- ALTER TABLE taxonomy_leaf ALTER uuid SET DEFAULT gen_random_uuid();
 -- ALTER TABLE taxonomy_tree ALTER uuid SET DEFAULT gen_random_uuid();
 -- ALTER TABLE link_owned_url_taxonomy ALTER uuid SET DEFAULT gen_random_uuid();
--- REVOKE UPDATE ON url FROM ""$current_user""; -- also revokes right to modify foreign keys on other tables...
+-- REVOKE UPDATE ON url FROM ""$currentUser""; -- also revokes right to modify foreign keys on other tables...
 EOT;
 
         foreach ($schema->toSql($conn->getDatabasePlatform()) as $line) :
