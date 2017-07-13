@@ -28,11 +28,13 @@ class DbalListDatabasesCommand extends ContainerAwareCommand
             // ...
         // }
 
-        $output->writeln($this
-            // ->getDBAL()
-            ->getContainer()->get('doctrine.dbal.default_connection')
-            ->getSchemaManager()
-            ->listDatabases()); // Tested OK with Postgres.
+        $output->writeln(
+            $this
+                // ->getDBAL()
+                ->getContainer()->get('doctrine.dbal.default_connection')
+                ->getSchemaManager()
+                ->listDatabases()
+        ); // Tested OK with Postgres.
         // TODO: see how to output an array.
     }
 }
