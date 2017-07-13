@@ -35,5 +35,4 @@ class DbalListDatabasesCommand extends ContainerAwareCommand
             ->listDatabases()); // Tested OK with Postgres.
             // TODO: see how to output an array.
     }
-
 }
