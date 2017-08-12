@@ -1,5 +1,5 @@
 {
-    "name": "dbal-util/cli-bundle",
+    "name": "doctrine-dbal-util/cli-bundle",
     "type": "symfony-bundle",
     "description": "Symfony Dbal Cli Bundle",
     "keywords": ["dbal", "database", "persistence", "cli", "snowyowl"],
@@ -17,12 +17,11 @@
         "symfony/http-kernel": "~2.7|~3.0|~4.0"
     },
     "require-dev": {
-        "escapestudios/symfony2-coding-standard": "^2.11"
     },
     "suggest": {
     },
     "autoload": {
-        "psr-4": { "DbalUtil\\CliBundle\\": "" }
+        "psr-4": { "DoctrineDbalUtil\\CliBundle\\": "" }
     },
     "extra": {
         "branch-alias": {
