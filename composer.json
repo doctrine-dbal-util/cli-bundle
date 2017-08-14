@@ -3,11 +3,11 @@
     "type": "symfony-bundle",
     "description": "Symfony Dbal Cli Bundle",
     "keywords": ["dbal", "database", "persistence", "cli", "snowyowl"],
-    "homepage": "https://github.com/dbal-util/cli-bundle",
+    "homepage": "https://github.com/doctrine-dbal-util/cli-bundle",
     "license": "MIT",
     "authors": [
         {"name": "Jean-bernard Addor"},
-        {"name": "Community", "homepage": "https://github.com/dbal-util/cli-bundle"}
+        {"name": "Community", "homepage": "https://github.com/doctrine-dbal-util/cli-bundle"}
     ],
     "require": {
         "php": "^5.0",
