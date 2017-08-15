@@ -1,6 +1,6 @@
 <?php
 
-namespace DbalUtil\CliBundle;
+namespace DoctrineDbalUtil\CliBundle;
 
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 
