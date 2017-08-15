@@ -1,6 +1,6 @@
 <?php
 
-namespace DbalUtil\CliBundle\Command;
+namespace DoctrineDbalUtil\CliBundle\Command;
 
 use Symfony\Bundle\FrameworkBundle\Command\ContainerAwareCommand;
 use Symfony\Component\Console\Input\InputArgument;
