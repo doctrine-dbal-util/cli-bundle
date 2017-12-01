@@ -10,7 +10,7 @@
         {"name": "Community", "homepage": "https://github.com/doctrine-dbal-util/cli-bundle"}
     ],
     "require": {
-        "php": "^5.0 || ^7",
+        "php": "^5.0",
         "doctrine/doctrine-bundle": "~1.6",
         "symfony/console": "~2.7|~3.0|~4.0",
         "symfony/framework-bundle": "~2.7|~3.0|~4.0",
