@@ -9,4 +9,5 @@ php:
 # - 5.5
 - 5.4
 
-# script: false
+script:
+- phpunit tests
