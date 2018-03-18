@@ -4,7 +4,7 @@
          bootstrap="vendor/autoload.php"
          verbose="true">
     <testsuite>
-        <directory suffix="Test.php">tests/Command</directory>
+        <directory suffix="Test.php">tests</directory>
     </testsuite>
 
     <filter>
