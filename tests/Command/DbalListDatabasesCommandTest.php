@@ -1,4 +1,7 @@
+<?php
+
 namespace Tests\Command;
+// namespace DoctrineDbalUtil\CliBundle\Command;
 
 use DoctrineDbalUtil\CliBundle\Command\DbalListDatabasesCommand;
 use Symfony\Bundle\FrameworkBundle\Console\Application;
