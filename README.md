@@ -1,3 +1,4 @@
+[![Build Status](https://travis-ci.org/doctrine-dbal-util/cli-bundle.svg)](https://travis-ci.org/doctrine-dbal-util/cli-bundle)
 # cli-bundle
 Command line interface to some dbal database commands
 
