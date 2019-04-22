@@ -4,11 +4,14 @@ namespace Tests\Command;
 // namespace DoctrineDbalUtil\CliBundle\Command;
 
 use DoctrineDbalUtil\CliBundle\Command\DbalListDatabasesCommand;
-use Symfony\Bundle\FrameworkBundle\Console\Application;
-use Symfony\Bundle\FrameworkBundle\Test\KernelTestCase;
+// use Symfony\Bundle\FrameworkBundle\Console\Application;
+use Symfony\Component\Console\Application;
+// use Symfony\Bundle\FrameworkBundle\Test\KernelTestCase;
+use \PHPUnit\Framework\TestCase;
 use Symfony\Component\Console\Tester\CommandTester;
 
-class DbalListDatabasesCommandTest extends KernelTestCase
+// class DbalListDatabasesCommandTest extends KernelTestCase
+class DbalListDatabasesCommandTest extends TestCase
 {
     public function testExecute()
     {
