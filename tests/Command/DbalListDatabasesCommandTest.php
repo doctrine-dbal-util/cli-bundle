@@ -12,10 +12,10 @@ class DbalListDatabasesCommandTest extends KernelTestCase
 {
     public function testExecute()
     {
-        // self::bootKernel();
-        $kernel = static::createKernel();
-        // $application = new Application(self::$kernel);
-        $application = new Application($kernel);
+        // // self::bootKernel();
+        // $kernel = static::createKernel();
+        // // $application = new Application(self::$kernel);
+        $application = new Application(static::createKernel());
 
         $application->add(new DbalListDatabasesCommand());
 
