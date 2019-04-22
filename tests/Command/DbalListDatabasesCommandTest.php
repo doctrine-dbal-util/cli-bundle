@@ -5,6 +5,11 @@
 
 // TODO
 
+// Demonstrate DBAL code on separate project
+
+// Consider Postgres instead of SQLite
+
+
 // Lazyness
 // https://symfony.com/doc/current/console/commands_as_services.html
 // https://symfony.com/doc/current/console/lazy_commands.html
