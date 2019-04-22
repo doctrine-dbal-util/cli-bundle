@@ -18,7 +18,8 @@ class DbalListDatabasesCommandTest extends TestCase
         // // self::bootKernel();
         // $kernel = static::createKernel();
         // // $application = new Application(self::$kernel);
-        $application = new Application(static::createKernel());
+        // $application = new Application(static::createKernel());
+        $application = new Application();
 
         $application->add(new DbalListDatabasesCommand());
 
