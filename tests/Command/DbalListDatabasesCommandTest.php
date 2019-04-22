@@ -15,25 +15,28 @@
 namespace Tests\Command;
 // namespace DoctrineDbalUtil\CliBundle\Command;
 
-use DoctrineDbalUtil\CliBundle\Command\DbalListDatabasesCommand; // ContainerAwareCommand: needs kernel!
-use Symfony\Bundle\FrameworkBundle\Console\Application;
-// use Symfony\Component\Console\Application;
-use Symfony\Bundle\FrameworkBundle\Test\KernelTestCase;
-// use \PHPUnit\Framework\TestCase;
+use DoctrineDbalUtil\CliBundle\Command\DbalListDatabasesCommand; // ContainerAwareCommand: needs kernel! -No more!
+// use Symfony\Bundle\FrameworkBundle\Console\Application;
+use Symfony\Component\Console\Application;
+// use Symfony\Bundle\FrameworkBundle\Test\KernelTestCase;
+use \PHPUnit\Framework\TestCase;
 use Symfony\Component\Console\Tester\CommandTester;
 
-class DbalListDatabasesCommandTest extends KernelTestCase
-// class DbalListDatabasesCommandTest extends TestCase
+// class DbalListDatabasesCommandTest extends KernelTestCase
+class DbalListDatabasesCommandTest extends TestCase
 {
     public function testExecute()
     {
         // // self::bootKernel();
         // $kernel = static::createKernel();
         // // $application = new Application(self::$kernel);
-        $application = new Application(static::createKernel());
-        // $application = new Application();
+        // $application = new Application(static::createKernel());
+        $application = new Application();
 
-        $application->add(new DbalListDatabasesCommand());
+        $application->add(new DbalListDatabasesCommand(\Doctrine\DBAL\DriverManager::getConnection(
+            ['url' => 'sqlite:///:memory:',], 
+            new \Doctrine\DBAL\Configuration()
+        )));
 
         $command = $application->find('dbal:list-databases');
         $commandTester = new CommandTester($command);
