@@ -2,14 +2,26 @@
 
 namespace DoctrineDbalUtil\CliBundle\Command;
 
-use Symfony\Bundle\FrameworkBundle\Command\ContainerAwareCommand;
-use Symfony\Component\Console\Input\InputArgument;
+use Doctrine\DBAL\Connection;
+// use Symfony\Bundle\FrameworkBundle\Command\ContainerAwareCommand;
+use Symfony\Component\Console\Command\Command;
+// use Symfony\Component\Console\Input\InputArgument;
 use Symfony\Component\Console\Input\InputInterface;
-use Symfony\Component\Console\Input\InputOption;
+// use Symfony\Component\Console\Input\InputOption;
 use Symfony\Component\Console\Output\OutputInterface;
 
-class DbalListDatabasesCommand extends ContainerAwareCommand
+class DbalListDatabasesCommand extends Command
 {
+    private $connection;
+
+    public function __construct(Connection $connection)
+    {
+        $this->connection = $connection;
+
+        // you *must* call the parent constructor
+        parent::__construct();
+    }
+
     protected function configure()
     {
         $this
@@ -29,10 +41,11 @@ class DbalListDatabasesCommand extends ContainerAwareCommand
         // }
 
         $output->writeln(
-            $this
-                // ->getDBAL()
-                ->getContainer()
-                ->get('doctrine.dbal.default_connection')
+            // $this
+                // // ->getDBAL()
+                // ->getContainer()
+                // ->get('doctrine.dbal.default_connection')
+            $this->connection
                 ->getSchemaManager()
                 ->listDatabases()
         ); // Tested OK with Postgres.
