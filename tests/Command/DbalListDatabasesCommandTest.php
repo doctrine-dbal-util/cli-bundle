@@ -4,12 +4,21 @@
 
 
 // TODO
+
+// Lazyness
+// https://symfony.com/doc/current/console/commands_as_services.html
+// https://symfony.com/doc/current/console/lazy_commands.html
+
+
+
+
+// Done
+
 // Try Define Commands as Services instead of ContainerAwareCommand or build a kernel with Symofny flex!
 // Deprecate ContainerAwareCommand https://github.com/symfony/symfony/issues/21623
 // How to Define Commands as Services https://symfony.com/doc/master/console/commands_as_services.html
 // Read 3.4 and 4.x version
-
-
+// Done
 
 
 namespace Tests\Command;
